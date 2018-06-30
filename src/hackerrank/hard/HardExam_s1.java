@@ -1,5 +1,7 @@
 package hackerrank.hard;
 
+import algoriithms.Sort;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -188,16 +190,9 @@ public class HardExam_s1 {
      */
     long angryChildren(int k, int[] packets) {
         int len = packets.length;
-        int tmp;
-        for(int i=0;i<len;i++){
-            for(int j=1;j<len;j++){
-                if(packets[j-1] > packets[j]){
-                    tmp = packets[j-1];
-                    packets[j-1] = packets[j];
-                    packets[j] = tmp;
-                }
-            }
-        }
+        int temp;
+        Sort sort = new Sort();
+        packets = sort.bubbleSort(packets);
         show(Arrays.toString(packets));
         long num,sum;
         long min = -1;

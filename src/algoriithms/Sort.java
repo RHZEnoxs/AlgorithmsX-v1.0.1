@@ -1,36 +1,25 @@
 package algoriithms;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
-import java.util.List;
 
 public class Sort {
-
+    int arrSrc [][] = {
+            {1,1,1,1,1,1,1,1,1},
+            {1,2,3,4,5,6,7,8,9},
+            {8,9,7,6,5,4,1,2,3},
+            {29,5,9,17,2,3,1},
+            {125,25,19,7,2,3,1},
+            {99,5,9,7,2,3,31}
+    };
     public Sort(){
-        int arr0[] = {1,1,1,1,1,1,1,1,1};
-        int arr1[] = {1,2,3,4,5,6,7,8,9};
-        int arr2[] = {8,9,7,6,5,4,1,2,3};
-        int arr3[] = {29,5,9,17,2,3,1};
-        int arr4[] = {125,25,19,7,2,3,1};
-        int arr5[] = {99,5,9,7,2,3,31};
-
-        arr0 = ctrlSort(arr0);
-        arr1 = ctrlSort(arr1);
-        arr2 = ctrlSort(arr2);
-        /*arr3 = ctrlSort(arr3);
-        arr4 = ctrlSort(arr4);
-        arr5 = ctrlSort(arr5);*/
-
-        System.out.println(Arrays.toString(arr0));
-        System.out.println(Arrays.toString(arr1));
-        System.out.println(Arrays.toString(arr2));
-        /*System.out.println(Arrays.toString(arr3));
-        System.out.println(Arrays.toString(arr4));
-        System.out.println(Arrays.toString(arr5));*/
+        for(int [] arr : arrSrc){
+            System.out.println(Arrays.toString(ctrlSort(arr)));
+        }
     }
     public int[] ctrlSort(int arr[]){
-//        arr = bubbleSort(arr);
-        arr = quickSort(arr);
+        arr = bubbleSort(arr);
+//        arr = quickSort(arr);
         return arr;
     }
 
